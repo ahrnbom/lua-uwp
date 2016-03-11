@@ -321,7 +321,12 @@ static int runargs (lua_State *L, char **argv, int n) {
 
 
 static int handle_luainit (lua_State *L) {
-  const char *init = getenv(LUA_INIT);
+#ifdef LUA_WINRT
+	const char *init = NULL;
+#else
+	const char *init = getenv(LUA_INIT);
+#endif // LUA_WINRT
+
   if (init == NULL) return 0;  /* status OK */
   else if (init[0] == '@')
     return dofile(L, init+1);

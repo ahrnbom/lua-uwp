@@ -89,7 +89,7 @@
     <None Include="..\src\Makefile" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{db11282b-fd2d-450c-81c9-3f51a2c72b98}</ProjectGuid>
+    <ProjectGuid>{93B8DA2C-888E-40C4-8E9E-5F31B53949E0}</ProjectGuid>
     <Keyword>StaticLibrary</Keyword>
     <ProjectName>lua-uwp</ProjectName>
     <RootNamespace>lua_uwp</RootNamespace>
