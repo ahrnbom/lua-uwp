@@ -705,6 +705,11 @@ union luai_Cast { double l_d; long l_l; };
 #define LUA_DL_DLL
 #endif
 
+// Adds support for building on WinRT
+#if WINAPI_FAMILY_PARTITION(WINAPI_FAMILY_DESKTOP_APP)
+#define LUA_WINRT
+#undef LUA_DL_DLL
+#endif
 
 /*
 @@ LUAI_EXTRASPACE allows you to add user-specific data in a lua_State
